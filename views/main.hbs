@@ -63,24 +63,10 @@
               <p class="close-handler">Close</p>
             </div>
 
-            <form class="sidebar-form">
-              <fieldset>
-                  <p>Leeftijd</p>
-                  <input class="age-slider" type="range" min="50" max="120" value="75">
-                  <div class="flex-space-between">
-                      <p>50 jaar</p>
-                      <p>120 jaar</p>
-                  </div>
+            <form class="sidebar-form" action="/" method="POST"> 
+                <input type="text" name="naam">
 
-
-                  <p>Afstand</p>
-                  <input class="age-slider" type="range" min="0" max="200" value="0">
-                  <div class="flex-space-between">
-                      <p>0 km</p>
-                      <p>200 km</p>
-                  </div>
-              </fieldset>
-              <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
             </form>
 
         </aside>
