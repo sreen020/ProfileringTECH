@@ -1,13 +1,89 @@
-{{> lovedChamps }}
-{{> hatedChamps }}
+<header>
+        <h2>NAAM APP</h2>
+        <!-- button -->
+    </header>
+    
+    <main>
+        <section>
+            
+            <div class="flex-space-between">
+                <h3>Resultaten binnen 30 km</h3>
+                <button class="sidebar-handler">Filter</button>
+            </div>
 
-{{#if listExists }}
-  <ul>
-    {{#each suggestedChamps}}
-      <li class={{this.lane}}>{{this.name}}</li>
-    {{/each}}
-  </ul>
 
-  {{/if}}
+            <div class="flex-div">
+                <article>
+                    <img class="image" src="img/bejaarden-man.jpg">
+                    <blockquote>
+                        <p>Naam Achternaam</p>
+                        <span>2 km</span>
+                    </blockquote>
+                </article>
+
+                <article>
+                    <img class="image" src="img/bejaarden-vrouw.jpg">
+                    <blockquote>
+                        <p>Naam Achternaam</p>
+                        <span>4 km</span>
+                    </blockquote>
+                </article>
+
+                <article>
+                    <img class="image" src="img/bejaarden-man.jpg">
+                    <blockquote>
+                        <p>Naam Achternaam</p>
+                        <span>6 km</span>
+                    </blockquote>
+                </article>
+
+                <article>
+                    <img class="image" src="img/bejaarden-vrouw.jpg">
+                    <blockquote>
+                        <p>Naam Achternaam</p>
+                        <span>8 km</span>
+                    </blockquote>
+                </article>
+
+                <article>
+                    <img class="image" src="img/bejaarden-man.jpg">
+                    <blockquote>
+                        <p>Naam Achternaam</p>
+                        <span>10 km</span>
+                    </blockquote>
+                </article>
+
+            </div>
+        </section>
 
 
+        <aside class="sidebar">
+            <div class="flex-space-between">
+              <h3 class="padding-bottom-2">Filter opties</h3>
+              <p class="close-handler">Close</p>
+            </div>
+
+            <form class="sidebar-form">
+              <fieldset>
+                  <p>Leeftijd</p>
+                  <input class="age-slider" type="range" min="50" max="120" value="75">
+                  <div class="flex-space-between">
+                      <p>50 jaar</p>
+                      <p>120 jaar</p>
+                  </div>
+
+
+                  <p>Afstand</p>
+                  <input class="age-slider" type="range" min="0" max="200" value="0">
+                  <div class="flex-space-between">
+                      <p>0 km</p>
+                      <p>200 km</p>
+                  </div>
+              </fieldset>
+              <button type="submit">Submit</button>
+            </form>
+
+        </aside>
+    </main>
+
+    <footer></footer>

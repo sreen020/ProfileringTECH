@@ -8,53 +8,26 @@ app.set('view engine', 'hbs');
 app.engine('hbs', handlebars({
     layoutsDir: __dirname + '/views/layouts',
     extname: 'hbs',
-    defaultLayout: 'planB',
+    defaultLayout: 'index',
     partialsDir: __dirname + '/views/layouts/partials/',
 }));
 
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/static'));
 
-
-fakeApi = () => {
-    return [
-      {
-        name: 'Katarina',
-        lane: 'midlaner'
-      },
-      {
-        name: 'Jayce',
-        lane: 'toplaner'
-      },
-      {
-        name: 'Heimerdinger',
-        lane: 'toplaner'
-      },
-      {
-        name: 'Zed',
-        lane: 'midlaner'
-      },
-      {
-        name: 'Azir',
-        lane: 'midlaner'
-      }
-    ];
-  }
-
-  const list = true;
 
 app.get('/', home)
-app.get('/profile', profile)
+app.get('/filter', filter)
 
 app.listen(port, function() {
     console.log('The server is running')
 });
 
 function home(req, res) {
-    res.render('main', {layout: 'index', suggestedChamps: fakeApi(), listExists: true});
+    res.render('main');
 };
 
-function profile(req, res) {
-    res.send("hello");
+function filter(req, res) {
+    res.render('filter');
 }
 
 

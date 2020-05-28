@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    padding: 1rem 2rem;
+    background-color: #F5B6C7;
+}
+
+main {
+    padding: 1rem 2rem;
+}
+
+article {
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.1), 0 10px 9px 0 rgba(0,0,0,-0.01);
+    border: 2px solid pink;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+blockquote {
+    padding: 0.9rem;
+}
+
+.padding-bottom-2 {
+    padding-bottom: 2rem;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.example-picture {
+    width: 14rem;
+    height: 14rem;
+    background-color: red;
+    border-radius: 0.4rem 0.4rem 0rem 0rem
+}
+
+.image {
+    object-fit: cover;
+    width: 14rem;
+    height: 14rem;
+}
+
+.sidebar {
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 17rem;
+    padding: 2rem;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.1), 0 10px 9px 0 rgba(0,0,0,-0.01);
+    display: none;
+}
+
+.filter-container {
+    padding: 2rem 0;
+}
+
+.age-slider {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 1.4rem 0;
+}
+
+.sidebar-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+}
