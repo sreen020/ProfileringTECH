@@ -13,13 +13,25 @@
 
 
             <div class="flex-div">
+
+                {{#each data}}
+
                 <article>
                     <img class="image" src="img/bejaarden-man.jpg">
                     <blockquote>
-                        <p>Naam Achternaam</p>
-                        <span>2 km</span>
+                        <p>{{ this.name }}</p>
+                        <span>{{ this.age }}</span>
+                        <span>{{ this.sex }}</span>
+                        <span>{{ this.hobby }}</span>
                     </blockquote>
                 </article>
+
+                {{/each}}
+
+                <script>
+                    console.log(data)    
+                </script>
+
 
                 <article>
                     <img class="image" src="img/bejaarden-vrouw.jpg">

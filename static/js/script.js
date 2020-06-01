@@ -1,3 +1,5 @@
+
+// SIDEBAR
 function sidebar() {
     const filterBtn = document.getElementsByClassName("sidebar-handler") [0]; 
     const sidebar = document.querySelector(".sidebar");
