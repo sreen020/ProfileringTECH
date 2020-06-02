@@ -43,16 +43,23 @@ app.post('/', urlencodedParser, function(req, res) {
     console.log(req.body);
 })
 
+
 function filter(req, res) {
     res.render('filter');
 }
 
+// app.get('/', function(req, res) {
+//     searchdb({ age: "76" });
+//     console.log("searchdb");
+    
+
+//     data.filter(function(value) {
+//         return value < 75;
+//     });
+// })
+
 
 // MONGODB
-app.get('/datapage', function(req, res) {
-    searchdb({ age: "72" });
-})
-
 function searchdb(query) {
     var MongoClient = mongodb.MongoClient;
 
@@ -69,10 +76,11 @@ function searchdb(query) {
             db.db('profileringtech').collection('interests').find(query).toArray(function(err, result) {
                 if (err) {
                     res.send(err);
-                } else if (result.length) {
+                } else if (result.length) {  
+                    data = result;
                     console.log(result);
                     
-                    data = result;
+
                 } else {
                     res.send("No data found");
                 }
@@ -82,7 +90,3 @@ function searchdb(query) {
         }
     })
 }
-
-app.get('/newperson', function(req, res) {
-    res.render('newperson', {title: 'Add Person'});
-});
