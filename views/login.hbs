@@ -1,0 +1,39 @@
+   <header>
+        <h2>NAAM APP</h2>
+        <!-- button -->
+    </header>
+    
+    <main>
+        <form action="/dashboard" method="POST">
+            <input type="text" name="username">
+            <input type="password" name="password">
+
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <aside class="sidebar">
+            <h3 class="padding-bottom-2">Filter opties</h3>
+
+            <fieldset>
+                <p>Leeftijd</p>
+                <input class="age-slider" type="range" min="50" max="120" value="75">
+                <div class="flex-space-between">
+                    <p>50 jaar</p>
+                    <p>120 jaar</p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <p>Afstand</p>
+                <input class="age-slider" type="range" min="0" max="200" value="0">
+                <div class="flex-space-between">
+                    <p>0 km</p>
+                    <p>200 km</p>
+                </div>
+            </fieldset>
+
+        </aside>
+
+    </main>
+
+    <footer></footer>
