@@ -1,5 +1,5 @@
 <header>
-        <h2>NAAM APP</h2>
+        <h2>OLD LOVE</h2>
         <!-- button -->
     </header>
     
@@ -7,14 +7,14 @@
         <section>
             
             <div class="flex-space-between">
-                <h3>Resultaten binnen 30 km</h3>
+                <h3>Resultaten</h3>
                 <button class="sidebar-handler">Filter</button>
             </div>
 
 
             <div class="flex-div">
 
-                {{#each data}}
+                {{!-- {{#each data}}
                 <article>
                     <img class="image" src="img/bejaarden-man.jpg">
                     <blockquote>
@@ -24,37 +24,45 @@
                         <span>{{ this.hobby }}</span>
                     </blockquote>
                 </article>
-                {{/each}}
+                {{/each}} --}}
 
                 <article>
                     <img class="image" src="img/bejaarden-vrouw.jpg">
                     <blockquote>
-                        <p>Naam Achternaam</p>
-                        <span>4 km</span>
+                        <p>Naam: Test data</p>
+                        <span>Leeftijd: 90</span>
+                        <span>Geslacht: V</span>
+                        <span>Hobby: Bingo</span>
                     </blockquote>
                 </article>
 
                 <article>
                     <img class="image" src="img/bejaarden-man.jpg">
                     <blockquote>
-                        <p>Naam Achternaam</p>
-                        <span>6 km</span>
+                        <p>Naam: Test data</p>
+                        <span>Leeftijd: 60</span>
+                        <span>Geslacht: M</span>
+                        <span>Hobby: Bingo</span>
                     </blockquote>
                 </article>
 
                 <article>
                     <img class="image" src="img/bejaarden-vrouw.jpg">
                     <blockquote>
-                        <p>Naam Achternaam</p>
-                        <span>8 km</span>
+                        <p>Naam: Test data</p>
+                        <span>Leeftijd: 97</span>
+                        <span>Geslacht: V</span>
+                        <span>Hobby: Bingo</span>
                     </blockquote>
                 </article>
 
                 <article>
                     <img class="image" src="img/bejaarden-man.jpg">
                     <blockquote>
-                        <p>Naam Achternaam</p>
-                        <span>10 km</span>
+                        <p>Naam: Test data</p>
+                        <span>Leeftijd: 77</span>
+                        <span>Geslacht: M</span>
+                        <span>Hobby: Bingo</span>
                     </blockquote>
                 </article>
 
@@ -69,7 +77,10 @@
             </div>
 
             <form class="sidebar-form" action="/filtered" method="POST"> 
-                <input type="text" name="age">
+                <div>
+                    <label for="age-filter">Voer gewenste leeftijd in</label>
+                    <input type="text" id="age-filter" name="age">
+                </div>
 
                 <button type="submit">Submit</button>
             </form>

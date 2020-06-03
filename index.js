@@ -36,6 +36,7 @@ app.use(
     }),
 );
 
+// Routing
 app.get('/', home);
 app.get('/login', test);
 app.get('/filter', filter);
@@ -45,10 +46,10 @@ app.get('/dashboard', dashboard);
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-
+// connecting to MONGODB
 let db = null;
 var url = 'mongodb://localhost:27017/profileringtech';
-// MONGODB
+
 mongodb.MongoClient.connect(url, {
     useUnifiedTopology: true
 },
@@ -59,9 +60,7 @@ mongodb.MongoClient.connect(url, {
 });
 
 
-
-
-
+// Route functions
 app.listen(port, function() {
     console.log('The server is running')
 });
@@ -153,7 +152,9 @@ app.post('/edit', (req, res) => {
             'hobby': nieuwedata.hobby,
         },
     }, (err, result) => {
-        if (result) res.redirect('/dashboard');
+        if (result) {
+            res.redirect('/'); 
+        }
     })
 });
 
@@ -161,35 +162,3 @@ app.post('/edit', (req, res) => {
 function filter(req, res) {
     res.render('filter');
 }
-
-
-// MONGODB
-// function searchdb(query) {
-//     var MongoClient = mongodb.MongoClient;
-
-//     var url = 'mongodb://localhost:27017/profileringtech';
-
-//     const options = { useUnifiedTopology: true };
-
-//     MongoClient.connect(url, options, function(err, db) {
-//         if (err) {
-//             console.log("unable to connect", err);
-//         } else {
-//             console.log("connected");
-
-//             db.db('profileringtech').collection('interests').find(query).toArray(function(err, result) {
-//                 if (err) {
-//                     res.send(err);
-//                 } else if (result.length) {  
-//                     data = result;
-//                     console.log(result);
-                    
-//                 } else {
-//                     res.send("No data found");
-//                 }
-
-//                 db.close();
-//             })
-//         }
-//     })
-// }

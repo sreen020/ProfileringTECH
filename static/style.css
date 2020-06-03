@@ -32,6 +32,27 @@ h3 {
 
 blockquote {
     padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: none;
+    border: 1px solid pink;
+    padding: 0.4rem 1.3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: pink;
+    color: #fff;
+    transition: 0.3s;
+}
+
+strong {
+    font-weight: 500;
 }
 
 .padding-bottom-2 {
@@ -88,9 +109,38 @@ fieldset {
     padding: 1.4rem 0;
 }
 
+input {
+    width: 13rem;
+    border: none;
+    border-bottom: 2px solid pink;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    margin: 0.9rem 0;
+}
+
 .sidebar-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 95%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-handler {
+    cursor: pointer;
+    color: red;
+    font-size: 0.9rem;
+}
+
+
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }

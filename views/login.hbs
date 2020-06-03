@@ -3,13 +3,17 @@
         <!-- button -->
     </header>
     
-    <main>
-        <form action="/dashboard" method="POST">
-            <input type="text" name="username">
-            <input type="password" name="password">
-
-            <button type="submit">SUBMIT</button>
-        </form>
+    <main class="login-background">
+        <section>
+            <h3>LOGIN</h3>
+            <form class="input-container" action="/dashboard" method="POST">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="password">
+                <div>
+                    <button type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </section>
 
         <aside class="sidebar">
             <h3 class="padding-bottom-2">Filter opties</h3>

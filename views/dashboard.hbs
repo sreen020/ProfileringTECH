@@ -1,9 +1,22 @@
-<form action="/edit" method="POST">
-    <input type="text" name="name" value="{{ data.name }}">
-    <input type="number" name="age" value="{{ data.age }}">
-    <input type="text" name="sex" value="{{ data.sex }}">
-    <input type="text" name="hobby" value="{{ data.hobby }}">
+<header>
+    <h2>OLD LOVE</h2>
+    <!-- button -->
+</header>
 
-    <button type="submit">submit</button>
-</form>
+<main class="login-background">
+
+    <section>
+        <h3>Edit Data</h3>
+
+        <form class="input-container" action="/edit" method="POST">
+            <input type="text" name="name" value="{{ data.name }}" placeholder="Naam">
+            <input type="number" name="age" value="{{ data.age }}" placeholder="Leeftijd">
+            <input type="text" name="sex" value="{{ data.sex }}" placeholder="Geslacht">
+            <input type="text" name="hobby" value="{{ data.hobby }}" placeholder="Hobby">
+
+            <button type="submit">submit</button>
+        </form>
+    </section>
+</main>
+
 
