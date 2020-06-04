@@ -24,6 +24,8 @@ app.engine('hbs', handlebars({
 app.use(express.static(__dirname + '/static'));
 app.use(bodyParser());
 
+
+// Session
 app.use(cookieParser());
 app.use(
     session({
@@ -130,7 +132,6 @@ app.post('/dashboard', (req, res) => {
     }else {
         res.redirect('/');
     }
-
 })
 
 app.post('/edit', (req, res) => {
